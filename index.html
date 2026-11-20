@@ -1,0 +1,303 @@
+<!--
+-- Universidad Autónoma de Campeche. 
+-- Materia: Diseño Web.
+-- Docente: Jose Carlos Aguilar Canepa.
+-- Actividad: Ejercicio: Guía informativa.
+-- Alumno: Pedro Alejandro Chavez Rivero.
+-- Fecha: 20 de noviembre de 2026.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía informativa interactiva de League of Legends para principiantes con datos oficiales de Data Dragon.">
+    <title>POROGALLETA</title>
+    <link rel="icon" type="image/webp" href="assets/item-cookie.webp">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <span class="etiqueta-parche-flotante" id="badge-parche" aria-live="polite">Conectando...</span>
+
+    <header class="barra-movil">
+        <a href="#inicio" class="logo">
+            <img src="assets/item-cookie.webp" alt="" class="logo-icono">
+            <span>PORO<span class="logo-acento">GALLETA</span></span>
+        </a>
+        <button id="boton-menu" class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+            ☰
+        </button>
+    </header>
+
+    <aside id="barra-lateral" class="barra-lateral" aria-label="Navegación principal">
+        <div class="lateral-cabecera">
+            <a href="#inicio" class="logo">
+                <img src="assets/item-cookie.webp" alt="" class="logo-icono">
+                <span>PORO<span class="logo-acento">GALLETA</span></span>
+            </a>
+        </div>
+
+        <nav class="menu-lateral">
+            <span class="categoria-menu">INTRODUCCIÓN</span>
+            <a href="#inicio">Inicio</a>
+            <a href="#conceptos-basicos">Conceptos Básicos</a>
+            <a href="#roles">Roles y Líneas</a>
+
+            <span class="categoria-menu">DETALLES</span>
+            <a href="#campeones">Campeones</a>
+            <a href="#objetos">Objetos (Tienda)</a>
+            <a href="#runas">Runas</a>
+            <a href="#hechizos">Hechizos de Invocador</a>
+        </nav>
+
+        <div class="lateral-pie">
+            <p class="autor-nombre">Pedro Alejandro Chávez Rivero</p>
+            <span class="autor-carrera">ITS</span>
+        </div>
+    </aside>
+
+    <div class="contenedor-principal">
+        <main>
+            <section id="inicio" class="portada">
+                <div class="portada-contenido">
+                    <span class="sub-etiqueta">GUÍA INTERACTIVA</span>
+                    <h1>Profundiza en los conceptos de <span>League of Legends</span> y también en su itemización</h1>
+                    <p>
+                        La zona donde se desarrolla la partida se llama "La Grieta del Invocador". En esta guía puedes aprender qué hace cada rol y
+                        examinar a detalle los campeones, objetos, runas y hechizos.
+                        Toda la información de esta página proviene de Data Dragon API.
+                    </p>
+                    <div class="acciones-portada">
+                        <a href="#conceptos-basicos" class="boton-primario">Empieza</a>
+                        <a href="#campeones" class="boton-secundario">Campeones</a>
+                    </div>
+                </div>
+
+                <div class="portada-media" aria-hidden="true">
+                    <img src="assets/poro-twerk.gif" alt="" class="portada-gif">
+                </div>
+            </section>
+
+            <section id="conceptos-basicos" class="seccion">
+                <div class="encabezado-seccion">
+                    <span>FUNDAMENTOS</span>
+                    <h2>Conceptos básicos</h2>
+                    <p>En la partida hay dos equipos con 5 jugadores cada uno y un rol asignado. El que destruya el nexo contrario gana la partida.</p>
+                    <p>Sigue estos consejos para lograrlo:</p>
+                </div>
+
+                <div class="cuadricula-tarjetas">
+                    <article class="tarjeta-info">
+                        <div class="tarjeta-info-cabecera">
+                            <span class="icono-concepto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9.5" cy="9.5" r="5.5"/>
+                                    <path d="M9.5 6.8v5.4M7.8 8.3h3.4M7.8 10.7h3.4"/>
+                                    <path d="M14.8 10.6a5.5 5.5 0 1 1-4.2 8.7"/>
+                                </svg>
+                            </span>
+                            <h3>Farmeo</h3>
+                        </div>
+                        <p>
+                            Cada determinado tiempo aparecen minions en las líneas; elimina siempre a los minions enemigos para conseguir oro y experiencia.
+                            El oro sirve para comprar objetos y la XP para mejorar tus habilidades. No olvides comprar y mejorar tus habilidades siempre que puedas.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta-info">
+                        <div class="tarjeta-info-cabecera">
+                            <span class="icono-concepto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 4v4h12V4h-3v2h-2V4h-2v2H9V4H6z"/>
+                                    <path d="M7.5 8l-1.5 12h12L16.5 8"/>
+                                    <path d="M10 20v-4a2 2 0 0 1 4 0v4"/>
+                                    <path d="M4 20h16"/>
+                                </svg>
+                            </span>
+                            <h3>Torretas, inhibidores y nexo</h3>
+                        </div>
+                        <p>
+                            Es importante derribar las torretas de una línea para poder llegar al nexo enemigo.
+                            Ten en cuenta que romper un inhibidor invoca supersúbditos mucho más fuertes en tu carril, los cuales generan más presión hacia el equipo enemigo.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta-info">
+                        <div class="tarjeta-info-cabecera">
+                            <span class="icono-concepto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2c2.5 3 5.5 5.2 5.5 9.5a5.5 5.5 0 0 1-11 0c0-1.6.6-3.1 1.5-4.4.4 1.3 1.4 2.1 2.4 2.1-.6-2.4.1-5.1 1.6-7.2z"/>
+                                    <path d="M12 17a2.5 2.5 0 0 0 2.5-2.5c0-1.2-.8-2.2-2.5-3.5-1.7 1.3-2.5 2.3-2.5 3.5A2.5 2.5 0 0 0 12 17z"/>
+                                    <path d="M5 20h14"/>
+                                </svg>
+                            </span>
+                            <h3>Objetivos Neutrales</h3>
+                        </div>
+                        <p>
+                            A lo largo de la jungla aparecen objetivos globales como el <strong>Dragón</strong> y el <strong>Barón Nashor</strong>.
+                            Asegurarlos en equipo otorga mejoras permanentes o temporales decisivas. Si eres jungla, los campamentos de tu lado del mapa son tu fuente de farmeo;
+                            elimínalos siempre que estén disponibles.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta-info">
+                        <div class="tarjeta-info-cabecera">
+                            <span class="icono-concepto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 12s3.8-6 10-6 10 6 10 6-3.8 6-10 6-10-6-10-6z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                </svg>
+                            </span>
+                            <h3>Visión y Centinelas (Wards)</h3>
+                        </div>
+                        <p>
+                            Aunque es la función principal del support, es tarea de todo el equipo apoyar con esto. El mapa está cubierto por niebla de guerra, lo que impide
+                            ver zonas en las que no te encuentras, así que colocar centinelas ilumina zonas clave para detectar a los enemigos.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="roles" class="seccion seccion-alterna">
+                <div class="encabezado-seccion">
+                    <span>ROLES</span>
+                    <h2>Cada línea cumple una función</h2>
+                    <p>Navega entre los roles para conocer su función en la partida.</p>
+                </div>
+
+                <div class="selector-botones" role="group" aria-label="Selector de roles">
+                    <button class="boton-filtro activo" data-rol="top" aria-pressed="true">
+                        <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-top.png" alt="">
+                        Superior (Top)
+                    </button>
+                    <button class="boton-filtro" data-rol="jungla" aria-pressed="false">
+                        <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-jungle.png" alt="">
+                        Jungla
+                    </button>
+                    <button class="boton-filtro" data-rol="mid" aria-pressed="false">
+                        <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-middle.png" alt="">
+                        Central (Mid)
+                    </button>
+                    <button class="boton-filtro" data-rol="adc" aria-pressed="false">
+                        <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-bottom.png" alt="">
+                        Tirador (ADC)
+                    </button>
+                    <button class="boton-filtro" data-rol="soporte" aria-pressed="false">
+                        <img src="https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-utility.png" alt="">
+                        Soporte
+                    </button>
+                </div>
+
+                <div id="detalle-rol" class="panel-rol" aria-live="polite"></div>
+            </section>
+
+            <section id="campeones" class="seccion">
+                <div class="encabezado-seccion">
+                    <span>CONOCE A LOS CAMPEONES Y ELIGE A TU FAVORITO</span>
+                    <h2>Explorador</h2>
+                    <p>En realidad, elegir al que más te guste siempre es lo mejor; no importa su dificultad, tú sé feliz. Haz clic en cualquier campeón para ver su historia y habilidades.</p>
+                </div>
+
+                <div class="controles-filtro">
+                    <input
+                        type="search"
+                        id="buscador-campeon"
+                        class="campo-busqueda"
+                        placeholder="Buscar campeón (ej. Ahri, Caitlyn, Garen)..."
+                        aria-label="Buscar campeón por nombre"
+                    >
+
+                    <div class="selector-botones" role="group" aria-label="Filtrar campeones por clase">
+                        <button class="boton-filtro activo" data-clase="All">Todos</button>
+                        <button class="boton-filtro" data-clase="Fighter">Luchador</button>
+                        <button class="boton-filtro" data-clase="Mage">Mago</button>
+                        <button class="boton-filtro" data-clase="Marksman">Tirador</button>
+                        <button class="boton-filtro" data-clase="Assassin">Asesino</button>
+                        <button class="boton-filtro" data-clase="Tank">Tanque</button>
+                        <button class="boton-filtro" data-clase="Support">Soporte</button>
+                    </div>
+                </div>
+
+                <p id="estado-campeones" class="estado-carga" aria-live="polite">Cargando campeones...</p>
+                <div id="lista-campeones" class="cuadricula-campeones"></div>
+                <div class="contenedor-mostrar-mas">
+                    <button id="boton-mas-campeones" class="boton-mostrar-mas oculto" type="button">
+                        Mostrar más campeones
+                    </button>
+                </div>
+            </section>
+
+            <section id="objetos" class="seccion seccion-alterna">
+                <div class="encabezado-seccion">
+                    <span>ITEMS</span>
+                    <h2>Tienda</h2>
+                    <p>A lo largo de la partida generarás oro constantemente; siempre que vuelvas a la base compra objetos para tu campeón.</p>
+                    <p>Consejo: Como esta guía es para principiantes, no te compliques con la itemización y compra los objetos que te recomienda la tienda.</p>
+                </div>
+
+                <div class="controles-filtro">
+                    <input
+                        type="search"
+                        id="buscador-objeto"
+                        class="campo-busqueda"
+                        placeholder="Buscar objeto (ej. Filo del Infinito, Botas)..."
+                        aria-label="Buscar objeto por nombre"
+                    >
+
+                    <div class="selector-botones" role="group" aria-label="Filtrar objetos por categoría">
+                        <button class="boton-filtro activo" data-categoria-item="All">Populares</button>
+                        <button class="boton-filtro" data-categoria-item="Damage">Daño Físico (AD)</button>
+                        <button class="boton-filtro" data-categoria-item="SpellDamage">Poder de Habilidad (AP)</button>
+                        <button class="boton-filtro" data-categoria-item="Armor">Resistencias / Vida</button>
+                        <button class="boton-filtro" data-categoria-item="Boots">Botas</button>
+                    </div>
+                </div>
+
+                <p id="estado-objetos" class="estado-carga" aria-live="polite">Cargando objetos...</p>
+                <div id="lista-objetos" class="cuadricula-objetos"></div>
+            </section>
+
+            <section id="runas" class="seccion">
+                <div class="encabezado-seccion">
+                    <span>TU ESTILO DE PELEA</span>
+                    <h2>Runas</h2>
+                    <p>Al elegir campeón también debes seleccionar una rama principal y una <strong>Runa Clave</strong> que define cómo pelea tu campeón. Al igual que con
+                       los ítems, usa la herramienta de recomendación al momento de elegir campeón.</p>
+                    <p>Aquí tienes una descripción breve de qué hace cada rama para que aprendas a identificar visualmente cuál te conviene más y no te gane el tiempo de selección.</p>
+                </div>
+
+                <div id="selector-ramas-runas" class="selector-botones" role="group" aria-label="Selector de ramas de runas"></div>
+                <div id="detalle-runas" class="cuadricula-runas" aria-live="polite">Cargando runas...</div>
+            </section>
+
+            <section id="hechizos" class="seccion seccion-alterna">
+                <div class="encabezado-seccion">
+                    <span>DURANTE LA SELECCIÓN DE CAMPEONES</span>
+                    <h2>Hechizos de Invocador</h2>
+                    <p>Tienes a tu disposición dos de estos hechizos; ten en cuenta que su CD es bastante elevado y son habilidades clave que te pueden salvar o darle la vuelta a una
+                        pelea, así que no los spamees. Salvo campeones que son casos especiales, siempre lleva Destello y, si eres jungla, el Smite es obligatorio.</p>
+                </div>
+
+                <div id="lista-hechizos" class="cuadricula-hechizos" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <footer class="pie-pagina">
+            <p><strong>POROGALLETA</strong> — Ejercicio de Guía Informativa. Diseño Web. Universidad Autónoma de Campeche.</p>
+            <p class="aviso-legal">Esta página la realicé únicamente con fines académicos; no es un medio oficial, no me demandes pls RIOT.</p>
+        </footer>
+    </div>
+
+    <div id="modal-campeon" class="modal-fondo oculto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal-contenido">
+            <button id="cerrar-modal" class="boton-cerrar" aria-label="Cerrar ventana">&times;</button>
+            <div id="modal-cuerpo"></div>
+        </div>
+    </div>
+
+</body>
+</html>
